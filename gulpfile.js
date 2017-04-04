@@ -52,7 +52,7 @@ gulp.task('jquery', function() {
 });
 
 gulp.task('bootstrap', function(){
-	gulp.src('./bower_components/bootstrap/dist/css/bootstrap-theme.min.css')
+	gulp.src('./bower_components/bootstrap/dist/css/bootstrap.min.css')
 		.pipe(gulp.dest('./public/stylesheets/bootstrap'));
 	gulp.src('./bower_components/bootstrap/dist/js/bootstrap.min.js')
 		.pipe(gulp.dest('./public/javascripts/bootstrap'));
@@ -60,7 +60,7 @@ gulp.task('bootstrap', function(){
 
 gulp.task('font-awesome', function() {
 	gulp.src('./bower_components/font-awesome/css/font-awesome.min.css')
-		.pipe(gulp.dest('./public/stylesheets/font-awesome'));
+		.pipe(gulp.dest('./public/stylesheets'));
 	gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}')
 		.pipe(gulp.dest('./public/fonts'));
 });
