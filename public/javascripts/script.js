@@ -4,7 +4,6 @@ function setRouter(elem, action){
 	console.log(url+action);
 	$.get(url+action, function(){
 		$(elem).toggleClass('active');
-		alert('ok');
 	});
 }
 
