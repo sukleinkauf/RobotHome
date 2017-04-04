@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 	res.render('index', { status: '' });
 });
 
-router.post('/:status', function(req, res, next) {
+router.get('/:status', function(req, res, next) {
 	var status = req.params.status;
 	if(status=='on'){
 		led.writeSync(1);
