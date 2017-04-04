@@ -1,9 +1,17 @@
+var url = '192.168.1.156:3000/';
+
+function setRouter(elem, action){
+	$.post(url+action, function(){
+		$(elem).toggleClass('active');
+	});
+}
+
 function verifyClass(elem){
 	var check = $(elem).hasClass('active');
 	if(check){
-		window.location.href = 'http://192.168.1.156:3000/off';
+		setRouter(elem, 'on');
 	}else{
-		window.location.href = 'http://192.168.1.156:3000/on';
+		setRouter(elem, 'off');
 	}
 }
 
