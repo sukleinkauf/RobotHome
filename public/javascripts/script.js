@@ -1,5 +1,5 @@
 function verifyClass(elem){
-	var check = $(elem).hasClass(active);
+	var check = $(elem).hasClass('active');
 	console.log(check);
 }
 
