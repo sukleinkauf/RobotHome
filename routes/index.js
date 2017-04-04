@@ -16,7 +16,7 @@ router.get('/:status', function(req, res, next) {
 	}else if(status=='off'){
 		led.writeSync(0);
 	}
-	res.render('index', { status: status });
+	res.render('index');
 });
 
 module.exports = router;
