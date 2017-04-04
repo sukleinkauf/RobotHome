@@ -1,8 +1,9 @@
-var url = '192.168.1.156:3000/';
+var url = 'http://192.168.1.156:3000/';
 
 function setRouter(elem, action){
-	$.post(url+action, function(){
+	$.post(url, {status: action}, function(){
 		$(elem).toggleClass('active');
+		alert('ok');
 	});
 }
 
