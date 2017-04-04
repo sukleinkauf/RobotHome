@@ -9,7 +9,6 @@ function verifyClass(elem){
 
 function actionClick(){
 	$('.button').click(function(){
-		$(this).toggleClass('active');
 		verifyClass($(this));
 	});
 }
