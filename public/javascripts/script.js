@@ -1,5 +1,11 @@
+function ajax(){
+	
+}
+
 function actionClick(){
-	alert('Click');
+	$('.button').click(function(){
+		$(this).toggleClass('active');
+	});
 }
 
 $(document).ready(function(){
