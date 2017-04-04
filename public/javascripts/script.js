@@ -9,9 +9,9 @@ function setRouter(elem, action){
 function verifyClass(elem){
 	var check = $(elem).hasClass('active');
 	if(check){
-		setRouter(elem, 'on');
-	}else{
 		setRouter(elem, 'off');
+	}else{
+		setRouter(elem, 'on');
 	}
 }
 
