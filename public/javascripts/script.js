@@ -3,7 +3,7 @@ var url = 'http://192.168.1.156:3000/';
 
 function setRouter(elem, action){
 	$.get(url+action, function(){
-		$(elem).toggleClass('active');
+		//$(elem).toggleClass('active');
 	});
 }
 

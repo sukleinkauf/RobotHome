@@ -17,9 +17,13 @@ router.get('/:status', function(req, res, next) {
 	}
 
 	var GpioStatus = led.readSync();
-	console.log(GpioStatus);
 	
-	res.render('index');
+	if(GpioStatus==1){
+		res.render('index', {status: 'active'});
+	}else{
+		res.render('index', {status: ''});
+	}
+	
 });
 
 module.exports = router;
