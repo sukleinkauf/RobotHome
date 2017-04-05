@@ -15,6 +15,10 @@ router.get('/:status', function(req, res, next) {
 	}else if(status=='off'){
 		led.writeSync(0);
 	}
+
+	var GpioStatus = led.readSync();
+	console.log(GpioStatus);
+	
 	res.render('index');
 });
 
