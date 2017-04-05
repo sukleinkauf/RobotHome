@@ -5,7 +5,6 @@ var led = new Gpio(14, 'out');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	console.log(req.params.status);
 	res.render('index', { status: '' });
 });
 

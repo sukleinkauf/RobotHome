@@ -14,86 +14,87 @@ html, body{
     width: 100%;
     height: 100%;
     background: @dark-70;
-}
 
-#menu{
-    width: 100%;
-    height: 50px;
-    position: absolute;
-    z-index: 2;
-    background: @dark-100;
-    box-shadow: 0px 1px 25px @black;
-}
-
-#main{
-    width: 100%;
-    height: 100%;
-    padding-top: 50px;
-
-    .button{
-        width: 200px;
-        height: 200px;
-        background: @dark-100;
+    #menu{
+        width: 100%;
+        height: 50px;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -100px;
-        margin-left: -100px;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        box-shadow: 0px 5px 20px @black;
-        outline: none;
+        z-index: 2;
+        background: @dark-100;
+        box-shadow: 0px 1px 25px @black;
+    }
 
-        i{
-            font-size: 100px;
-            color: @dark-70;
+    #main{
+        width: 100%;
+        height: 100%;
+        padding-top: 50px;
+        background-image: radial-gradient(circle closest-side, @dark-70, @dark-70);
+
+        .button{
+            width: 200px;
+            height: 200px;
+            background: @dark-100;
             position: absolute;
             top: 50%;
             left: 50%;
-            margin-top: -50px;
-            margin-left: -28.57px;
-            background: transparent;
-            -webkit-filter: drop-shadow(0px 0px 8px @black); /* Safari */
-            filter: drop-shadow(0px 0px 8px @black);
-        }
-    
-        &.active{           
-            -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-            animation: neon1 1.5s ease-in-out infinite alternate;        
-            
-            @-webkit-keyframes neon1 {
-            from {
-                    background: currentColor;
-                    box-shadow: 0px 15px 20px @black;
-                    -webkit-filter: drop-shadow(0px 0px 80px @gray-white); /* Safari */
-                    filter: drop-shadow(0px 0px 80px @gray-white);
-                }
-                to {
-                    background: currentColor;
-                    box-shadow: 0px 15px 40px @black;
-                    -webkit-filter: drop-shadow(0px 0px 100px @gray-white); /* Safari */
-                    filter: drop-shadow(0px 0px 100px @gray-white);
-                }
-            }
+            margin-top: -100px;
+            margin-left: -100px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0px 5px 20px @black;
+            outline: none;
 
             i{
-                -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
-                animation: neon2 1.5s ease-in-out infinite alternate;
+                font-size: 100px;
+                color: @dark-100;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -50px;
+                margin-left: -28.57px;
+                background: transparent;
+                -webkit-filter: drop-shadow(0px 0px 8px @black); /* Safari */
+                filter: drop-shadow(0px 0px 8px @black);
+            }
+        
+            &.active{           
+                -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+                animation: neon1 1.5s ease-in-out infinite alternate;        
 
-                @-webkit-keyframes neon2 {
-                from {
-                        color: @gray-white;
-                        -webkit-filter: drop-shadow(0px 0px 20px @gray-white); /* Safari */
-                        filter: drop-shadow(0px 0px 20px @gray-white);
-                    }
-                    to {
-                        color: @gray-white;
-                        -webkit-filter: drop-shadow(0px 0px 25px @gray-white); /* Safari */
-                        filter: drop-shadow(0px 0px 25px @gray-white);
-                    }
+                i{
+                    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+                    animation: neon2 1.5s ease-in-out infinite alternate;
                 }
             }
         }
+    }
+}
+
+@-webkit-keyframes neon1 {
+    from {
+        background: currentColor;
+        box-shadow: 0px 8px 30px @black;
+        -webkit-filter: drop-shadow(0px 0px 80px @gray-white); /* Safari */
+        filter: drop-shadow(0px 0px 80px @gray-white);
+    }
+    to {
+        background: currentColor;
+        box-shadow: 0px 15px 40px @black;
+        -webkit-filter: drop-shadow(0px 0px 100px @gray-white); /* Safari */
+        filter: drop-shadow(0px 0px 100px @gray-white);
+    }
+}
+
+@-webkit-keyframes neon2 {
+    from {
+        color: #FFF;
+        -webkit-filter: drop-shadow(0px -2px 20px @gray-white); /* Safari */
+        filter: drop-shadow(0px -2px 20px @gray-white);
+    }
+    to {
+        color: @gray-white;
+        -webkit-filter: drop-shadow(0px 0px 25px @gray-white); /* Safari */
+        filter: drop-shadow(0px 0px 25px @gray-white);
     }
 }
