@@ -61,7 +61,7 @@ gulp.task('bootstrap', function(){
 gulp.task('font-awesome', function() {
 	gulp.src('./bower_components/font-awesome/css/font-awesome.min.css')
 		.pipe(gulp.dest('./public/stylesheets'));
-	gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,eof,svg}')
+	gulp.src('./bower_components/font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
 		.pipe(gulp.dest('./public/fonts'));
 });
 
