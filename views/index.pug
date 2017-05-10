@@ -2,9 +2,8 @@ extends layout
 
 block content
     #main
-        if status=='active'
-            button.button.active
+        if status!='active'
+            button.button 
+                i.fa.fa-lightbulb-o(aria-hidden='true')
         else
-            button.button
-            | 
-            i.fa.fa-lightbulb-o(aria-hidden='true')
+            button.button.active
